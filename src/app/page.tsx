@@ -1,7 +1,7 @@
 import Hero from "@/components/HeroSection/Hero";
 import { ImageType, ProductType } from "@/productType";
 import Product from "@/components/ProductSection/Product";
-
+import Footer from "@/components/Footer/Footer";
 export default async function Home() {
   const imageData = await fetch("https://www.giovankov.com/api/image.json");
   const productData = await fetch("https://www.giovankov.com/api/product.json");
@@ -31,6 +31,7 @@ export default async function Home() {
     <div className="overflow-hidden">
       <Hero></Hero>
       <Product products={modifiedProduct}></Product>
+      <Footer></Footer>
     </div>
   );
 }
