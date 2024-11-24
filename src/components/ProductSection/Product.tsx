@@ -30,11 +30,13 @@ function Product({ products }: Props) {
           {products.map((el) => {
             return (
               <div
-                onClick={() => openPreviewModal(el.img)}
                 key={el.id}
-                className="col-span-6 md:col-span-3 lg:col-span-3 xl:col-span-2  max-w-sm overflow-hidden shadow-xl rounded-lg w-[140px] md:h-[260px] xl:w-[180px] "
+                className="col-span-6 md:col-span-3 lg:col-span-3 xl:col-span-2  max-w-sm overflow-hidden shadow-xl rounded-lg w-[140px] md:h-[260px] xl:w-[180px]"
               >
-                <div className="w-full max-h-130 relative">
+                <div
+                  className="w-full max-h-130 relative cursor-pointer"
+                  onClick={() => openPreviewModal(el.img)}
+                >
                   <Image
                     className=""
                     src={el.img ? el.img : "/static/Img/hero-3.png"}

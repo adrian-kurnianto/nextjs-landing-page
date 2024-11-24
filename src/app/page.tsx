@@ -29,9 +29,15 @@ export default async function Home() {
 
   return (
     <div className="overflow-hidden">
-      <Hero></Hero>
-      <Product products={modifiedProduct}></Product>
-      <Footer></Footer>
+      <div id="hero-section">
+        <Hero></Hero>
+      </div>
+      <div id="product-section">
+        <Product products={modifiedProduct}></Product>
+      </div>
+      <div id="contact-section">
+        <Footer></Footer>
+      </div>
     </div>
   );
 }

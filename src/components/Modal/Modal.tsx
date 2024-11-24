@@ -27,7 +27,12 @@ function Modal({ isOpen, onClose, image }: Props) {
           </button>
         </div>
         <div className=" shadow-lg rounded-lg max-w-[300px] lg:max-w-[700px]">
-          <Image src={image} width={800} height={800} alt=""></Image>
+          <Image
+            src={image || "/static/Img/hero-3.png"}
+            width={800}
+            height={800}
+            alt=""
+          ></Image>
         </div>
       </div>
     </>
