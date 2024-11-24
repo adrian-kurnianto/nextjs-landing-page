@@ -23,11 +23,11 @@ function Hero() {
   }, [autoSlide]);
 
   return (
-    <div className="w-full pt-[10vh] h-[100vh] md:h-[75vh] xl:h-screen bg-gray-50 px-8">
+    <div className="w-full pt-[10vh] h-[100vh] md:h-[75vh] xl:h-screen bg-gray-50 px-8 mb-4 transition-all ease-in-out">
       <div className="flex flex-col items-center w-[90%] sm:w-[80%] h-full mx-auto justify-center">
         <div className="w-[100%] overflow-x-hidden relative mb-8 ">
           <div
-            className="flex transition-transform ease-out duration-300"
+            className="flex transition-transform ease-out duration-500 gap-2"
             style={{ transform: `translateX(-${currentContent * 100}%)` }}
           >
             {HeroContent.map((el) => {
