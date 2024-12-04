@@ -21,7 +21,7 @@ function Product({ products }: Props) {
 
   const addToSelected = (data: ModifiedProductType) => {
     const isExist = previewData.indexOf(data) !== -1;
-    console.log(isExist);
+
     if (isExist) {
       setPreviewData(previewData.filter((el) => el !== data));
     } else {
