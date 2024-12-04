@@ -40,13 +40,13 @@ function Product({ products }: Props) {
         <div className="flex w-full justify-center gap-3 mb-4">
           <button
             onClick={openPreviewModal}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full hidden md:block lg:block"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full lg:block"
           >
             View Selected
           </button>
           <button
             onClick={clearSelected}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full hidden md:block lg:block"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full lg:block"
           >
             Clear Selected
           </button>
