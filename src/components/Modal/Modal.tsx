@@ -2,13 +2,14 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import { ModifiedProductType } from "@/productType";
 type Props = {
   isOpen: boolean;
   onClose: () => void;
-  image: string;
+  data?: ModifiedProductType[];
 };
 
-function Modal({ isOpen, onClose, image }: Props) {
+function Modal({ isOpen, onClose, data }: Props) {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -26,13 +27,23 @@ function Modal({ isOpen, onClose, image }: Props) {
             <XMarkIcon className="fill-white w-8" />
           </button>
         </div>
-        <div className=" shadow-lg rounded-lg max-w-[300px] lg:max-w-[700px]">
-          <Image
-            src={image || "/static/Img/hero-3.png"}
-            width={800}
-            height={800}
-            alt=""
-          ></Image>
+        <div className="flex justify-around gap-3">
+          {data?.map((el) => {
+            return (
+              <div key={el.id} className="bg-white p-4">
+                <div className="shadow-lg rounded-lg max-w-[100px] lg:max-w-[120px]">
+                  <Image
+                    src={el.img || "/static/Img/hero-3.png"}
+                    width={800}
+                    height={800}
+                    alt=""
+                  ></Image>
+                  <div>ID: {el.id || ""}</div>
+                  <div>name: {el.name || ""}</div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
